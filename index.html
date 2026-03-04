@@ -1,147 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Verilog Flow</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verilog Flow</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins',sans-serif;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #1a1c20;
+      color: white;
+    }
 
-        body{
-            background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-            color:white;
-        }
+    /* NAVIGATION BAR */
+    nav {
+      background: #111;
+      padding: 10px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #00bfff;
+    }
 
-        header{
-            padding:40px 8%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            min-height:70vh;
-        }
+    nav h2 {
+      font-size: 24px;
+    }
 
-        /* LEFT SIDE */
-        .left{
-            max-width:600px;
-            animation:fadeIn 1.5s ease-in-out;
-        }
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
 
-        .left h1{
-            font-size:42px;
-            font-weight:600;
-            margin-bottom:15px;
-        }
+    nav a:hover {
+      color: #00bfff;
+    }
 
-        .typing{
-            font-size:17px;
-            color:#00e6ff;
-            border-right:2px solid #00e6ff;
-            white-space:nowrap;
-            overflow:hidden;
-            width:0;
-            animation:typing 5s steps(60,end) forwards,
-                      blink .8s infinite;
-        }
+    /* HEADER / HERO */
+    header {
+      padding: 60px 8%;
+      text-align: center;
+      background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+    }
 
-        /* RIGHT SIDE */
-        .right{
-            text-align:center;
-            animation:fadeIn 2s ease-in-out;
-        }
+    header img {
+      width: 140px;
+      border-radius: 50%;
+      border: 3px solid #00bfff;
+      margin: 15px 0;
+    }
 
-        .right img{
-            width:170px;
-            height:170px;
-            border-radius:50%;
-            border:3px solid #00e6ff;
-            object-fit:cover;
-            margin-bottom:15px;
-        }
+    header h1 {
+      font-size: 40px;
+      margin: 10px 0;
+    }
 
-        .right a{
-            text-decoration:none;
-            color:white;
-            font-size:14px;
-            background:#00e6ff;
-            padding:8px 18px;
-            border-radius:20px;
-            display:inline-block;
-            transition:0.3s;
-        }
+    header p {
+      color: #00d9ff;
+      font-size: 18px;
+      max-width: 720px;
+      margin: auto;
+    }
 
-        .right a:hover{
-            background:white;
-            color:#0f2027;
-        }
+    /* CONTENT SECTIONS */
+    .section {
+      padding: 40px 8%;
+    }
 
-        /* ANIMATIONS */
-        @keyframes typing{
-            from{width:0}
-            to{width:100%}
-        }
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00bfff;
+      display: inline-block;
+    }
 
-        @keyframes blink{
-            50%{border-color:transparent}
-        }
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-        @keyframes fadeIn{
-            from{opacity:0; transform:translateY(20px);}
-            to{opacity:1; transform:translateY(0);}
-        }
+    .card {
+      background: #2d2f32;
+      padding: 20px;
+      border-radius: 8px;
+      flex-basis: 30%;
+      min-width: 230px;
+      box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+      transition: 0.3s;
+    }
 
-        /* RESPONSIVE */
-        @media(max-width:900px){
-            header{
-                flex-direction:column;
-                text-align:center;
-                gap:40px;
-            }
-            .typing{
-                white-space:normal;
-                border:none;
-                animation:none;
-                width:100%;
-            }
-        }
-    </style>
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #00d9ff;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+      border-top: 1px solid #444;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 80%;
+      }
+    }
+
+  </style>
+
 </head>
+
 <body>
 
-<header>
-
-    <!-- LEFT CONTENT -->
-    <div class="left">
-        <h1>Verilog Flow</h1>
-
-        <p class="typing">
-            A structured repository of Verilog HDL programs covering 
-            combinational and sequential circuits, FSM design, and 
-            verification testbenches for mastering digital design.
-        </p>
+  <!-- NAVIGATION -->
+  <nav>
+    <h2>Verilog Flow</h2>
+    <div>
+      <a href="#about">About</a>
+      <a href="#topics">Topics</a>
+      <a href="#examples">Examples</a>
     </div>
+  </nav>
 
-    <!-- RIGHT CONTENT -->
-    <div class="right">
-        <!-- Replace profile.jpg with your image file name -->
-        <img src="profile.jpg" alt="Profile Picture">
+  <!-- HEADER -->
+  <header>
+    <img src="Profilepicture.jpeg" alt="Profile Picture">
+    <h1>Verilog Flow</h1>
+    <p>
+      A focused repository of Verilog HDL code examples, structured for easy learning 
+      and real world digital design practice. Explore Verilog concepts from basics 
+      to advanced testbenches.
+    </p>
+  </header>
 
-        <br>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <h2>About This</h2>
+    <p>
+      This website highlights the Verilog Flow repository — a collection of custom 
+      Verilog HDL code implementations, including combinational logic, sequential 
+      circuits, finite state machines, and associated testbenches.
+    </p>
+  </section>
 
-        <a href="https://www.linkedin.com/in/neha-s-28551326a/" target="_blank">
-            Visit My Profile
-        </a>
+  <!-- TOPICS SECTION -->
+  <section id="topics" class="section">
+    <h2>Verilog Topics</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Combinational Logic</h3>
+        <p>Includes AND, OR, XOR gates, multiplexers, decoders and more.</p>
+      </div>
+
+      <div class="card">
+        <h3>Sequential Circuits</h3>
+        <p>Flip-flops (D, JK, T), counters, shift registers, enable/clear logic.</p>
+      </div>
+
+      <div class="card">
+        <h3>FSM & State Machines</h3>
+        <p>Moore and Mealy machine examples with testbench structures.</p>
+      </div>
     </div>
+  </section>
 
-</header>
+  <!-- EXAMPLES SECTION -->
+  <section id="examples" class="section">
+    <h2>Verilog Examples</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Basic Gate</h3>
+        <p>Verilog code demonstrating dataflow and structural modeling of logic gates.</p>
+      </div>
+
+      <div class="card">
+        <h3>Full Adder</h3>
+        <p>An example implementation of a full adder using assign statements.</p>
+      </div>
+
+      <div class="card">
+        <h3>Shift Register</h3>
+        <p>Example of a shift register implemented in Verilog for data movement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Verilog Flow | Designed for Digital Design Learning
+  </footer>
 
 </body>
+
 </html>
