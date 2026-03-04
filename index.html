@@ -71,11 +71,50 @@ body {
     background: white;
 }
 
+/* SECTIONS */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* PROJECT CARDS */
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #111;
+    font-size: 14px;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
-        text-align: center;
     }
 
     .hero-right {
@@ -87,15 +126,13 @@ body {
 
 <body>
 
+<!-- HERO SECTION -->
 <header class="hero">
-
-    <!-- LEFT SIDE -->
     <div class="hero-left">
         <h1 class="title">Verilog Flow</h1>
         <p class="typing-text"></p>
     </div>
 
-    <!-- RIGHT SIDE -->
     <div class="hero-right">
         <img src="Profilepicture.jpeg" alt="Profile Picture" class="profile-pic">
         <br>
@@ -105,8 +142,45 @@ body {
            Visit My Profile
         </a>
     </div>
-
 </header>
+
+<!-- ABOUT SECTION -->
+<section class="section">
+    <h2>About This Website</h2>
+    <p>
+        Verilog Flow is a structured collection of Verilog HDL programs 
+        covering combinational circuits, sequential circuits, FSM designs, 
+        and complete verification testbenches.  
+        This platform is designed to strengthen digital design fundamentals.
+    </p>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section class="section">
+    <h2>Core Topics</h2>
+
+    <div class="projects">
+        <div class="card">
+            <h3>Combinational Circuits</h3>
+            <p>Basic gates, MUX, DEMUX, Encoder, Decoder and more.</p>
+        </div>
+
+        <div class="card">
+            <h3>Sequential Circuits</h3>
+            <p>Flip-flops, Counters, Shift Registers and Timing logic.</p>
+        </div>
+
+        <div class="card">
+            <h3>FSM & Testbenches</h3>
+            <p>Moore & Mealy FSM design with verification strategies.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Verilog Flow | Designed for Digital Design Learning
+</footer>
 
 <script>
 const text = "A structured repository of Verilog HDL programs covering combinational and sequential circuits, FSM design, and verification testbenches for mastering digital design.";
