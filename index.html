@@ -2,87 +2,142 @@
 <html>
 <head>
     <title>Verilog Flow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f6f9;
-        }
-        h1 {
+            margin: 0;
+            background: #f4f6f9;
             text-align: center;
         }
-        .box {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
         }
-        ul {
-            margin-left: 20px;
+
+        .header img {
+            width: 160px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 15px;
         }
+
+        .header h1 {
+            margin: 10px 0 5px;
+        }
+
+        .header p {
+            margin: 5px 0 20px;
+            font-size: 18px;
+        }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            background: #2c3e50;
-            color: white;
+            margin: 5px;
+            background: white;
+            color: #2c3e50;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
         }
-        .center {
-            text-align: center;
+
+        .btn:hover {
+            background: #ddd;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .box {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 85%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            text-align: left;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .box {
+                width: 95%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<h1>Verilog Flow 🚀</h1>
-<p style="text-align:center;">
-A Structured Collection of Verilog HDL Programs
-</p>
+<div class="header">
+    <!-- YOUR PROFILE IMAGE -->
+    <img src="Profilepicture.jpeg" alt="Profile Picture">
 
-<div class="box">
-<h2>Introduction</h2>
-<ul>
-<li>Verilog HDL basics</li>
-<li>Different abstraction levels</li>
-<li>Testbench concepts</li>
-</ul>
+    <h1>Neha S</h1>
+    <p>VLSI Enthusiast | Design Verification Learner</p>
+
+    <a class="btn" href="https://github.com/NEHA-S07">GitHub</a>
+    <a class="btn" href="https://linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+    <a class="btn" href="resume.pdf">Resume</a>
 </div>
 
-<div class="box">
-<h2>Combinational Circuits</h2>
-<ul>
-<li>Basic Gates</li>
-<li>Verilog Code (Dataflow, Gate-level, Behavioral)</li>
-<li>Testbench Code</li>
-<li>Multiplexer, Decoder</li>
-<li>All Combinational Circuits</li>
-</ul>
+<div class="section">
+    <h2>Verilog Flow 🚀</h2>
+    <p>A structured collection of Verilog HDL programs for Digital Design & Verification.</p>
+
+    <div class="box">
+        <h3>Combinational Circuits</h3>
+        <ul>
+            <li>Basic Logic Gates</li>
+            <li>Multiplexer & Decoder</li>
+            <li>Dataflow Modeling</li>
+            <li>Gate-Level Modeling</li>
+            <li>Behavioral Modeling</li>
+            <li>Testbench Code</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Sequential Circuits</h3>
+        <ul>
+            <li>SR, JK, D, T Flip-Flops</li>
+            <li>Counters</li>
+            <li>Moore FSM</li>
+            <li>Mealy FSM</li>
+            <li>Testbench Code</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Tools Used</h3>
+        <ul>
+            <li>ModelSim / QuestaSim</li>
+            <li>GTKWave</li>
+            <li>Vivado</li>
+        </ul>
+    </div>
 </div>
 
-<div class="box">
-<h2>Sequential Circuits</h2>
-<ul>
-<li>Flip-Flops (SR, JK, D, T)</li>
-<li>Verilog Code</li>
-<li>Testbench Code</li>
-<li>Counters</li>
-<li>All Sequential Circuits</li>
-</ul>
-</div>
-
-<div class="center">
-<h2>Thank You</h2>
-<a class="btn" href="https://github.com/NEHA-S07">Contact</a>
-</div>
+<footer>
+    © 2026 Neha S | Verilog Flow
+</footer>
 
 </body>
 </html>
-<div style="text-align:center; margin-top:20px;">
-    <img src="profile.jpg" 
-         alt="Profile Picture" 
-         width="150" 
-         style="border-radius:50%; border:4px solid #2c3e50;">
-</div>
